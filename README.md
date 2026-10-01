@@ -115,14 +115,8 @@ python main.py --data_path "C:\path\to\DEAP\data_preprocessed_python"
 Preliminary validation runs on the DEAP dataset (Subjects 1 to 5, Binary Valence task, 80/20 train/validation split):
 
 | Model | Task | Channels | Samples | Epochs | Best Validation Accuracy |
-| :--- | :--- | :--- | :--- | :--- | :.
-- [ ] Add support for frequency-domain representation transforms (DE / PSD extraction).
-
----
-
-## References
-
-1 | **75.00%** |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| EEGNet | Binary Valence | 32 | 8064 | 10 | **75.00%** |
 
 *Note: Baseline performance may vary based on cross-validation configurations and subject subsets.*
 
