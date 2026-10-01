@@ -1,6 +1,6 @@
 ﻿import torch
 import pytest
-from src.eeg_benchmark.models.eegnet import EEGNet
+from eeg_benchmark.models.eegnet import EEGNet
 
 
 def test_eegnet_forward_pass_4d():
