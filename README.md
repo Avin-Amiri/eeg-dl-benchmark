@@ -1,5 +1,12 @@
 # eeg-dl-benchmark
 
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.0-red?logo=pytorch&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![GitHub](https://img.shields.io/badge/GitHub-Repo-black?logo=github&logoColor=white)
+
+---
+
 A modular, reproducible deep learning benchmark framework for Electroencephalography (EEG) emotion recognition, implemented in PyTorch. The repository focuses on standardized preprocessing pipelines, robust cross-subject/within-subject validation strategies, and clean baseline architectures for standardized datasets.
 
 ---
@@ -24,7 +31,7 @@ Benchmarking deep learning architectures on non-stationary, low SNR biosignals l
 
 ### 2. Implemented Architectures
 - **EEGNet (Lawhern et al., 2018):**
-  - **Temporal Convolution:** Frequency filtering across time steps ($F_1 = 8, \text{kernel\_length} = 64$).
+  - **Temporal Convolution:** Frequency filtering across time steps (`F1 = 8`, `kernel_length = 64`).
   - **Depthwise Spatial Convolution:** Channel mixing constrained by maximum norm ($D = 2$).
   - **Separable Convolution:** Temporal summary feature extraction ($F_2 = 16$).
   - **Regularization:** Spatial/Temporal dropout and max-norm constrained classification head.
