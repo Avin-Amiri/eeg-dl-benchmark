@@ -1,7 +1,7 @@
 ﻿import numpy as np
 import torch
 from torch.utils.data import DataLoader
-from src.eeg_benchmark.data import EEGDataset, EEGStandardScaler
+from eeg_benchmark.data import EEGDataset, EEGStandardScaler
 
 
 def test_eeg_dataset_and_loader():
