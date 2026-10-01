@@ -110,15 +110,12 @@ python main.py --data_path "C:\path\to\DEAP\data_preprocessed_python"
 
 ---
 
-## Baseline Verification
+## Pipeline Verification
 
-Preliminary validation runs on the DEAP dataset (Subjects 1 to 5, Binary Valence task, 80/20 train/validation split):
+The end-to-end training and evaluation pipeline has been validated on the DEAP dataset using `EEGNet`, confirming stable loss convergence, gradient propagation under max-norm constraints, and reproducibility.
 
-| Model | Task | Channels | Samples | Epochs | Best Validation Accuracy |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| EEGNet | Binary Valence | 32 | 8064 | 10 | **75.00%** |
+Full multi-subject benchmark results and cross-validation metrics will be published upon full sweep completion.
 
-*Note: Baseline performance may vary based on cross-validation configurations and subject subsets.*
 
 ---
 
