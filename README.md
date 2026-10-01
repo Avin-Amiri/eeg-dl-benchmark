@@ -7,8 +7,7 @@
 
 ---
 
-A modular, reproducible deep learning benchmark framework for Electroencephalography (EEG) emotion recognition, implemented in PyTorch. The repository focuses on standardized preprocessing pipelines, robust cross-subject/within-subject validation strategies, and clean baseline architectures for standardized datasets.
-
+EEG-DL-Benchmark is an open-source, modular framework designed to bridge the gap between neurophysiological data and deep learning architectures. This repository provides a robust, reproducible pipeline for benchmarking state-of-the-art models—such as EEGNet—on public datasets like DEAP. Focused on affective computing and BCI research, this project emphasizes clean code, CI/CD integration, and scalability, making it an ideal starting point for researchers and developers diving into cognitive signal processing.
 ---
 
 ## Overview
