@@ -1,4 +1,4 @@
-# eeg-dl-benchmark
+# EEG-DL-Benchmark
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0-red?logo=pytorch&logoColor=white)
