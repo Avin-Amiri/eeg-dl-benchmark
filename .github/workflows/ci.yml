@@ -25,5 +25,7 @@ jobs:
         pip install pytest scikit-learn numpy
 
     - name: Run tests
+      env:
+        PYTHONPATH: src
       run: |
         pytest -v
