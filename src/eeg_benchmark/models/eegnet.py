@@ -35,9 +35,9 @@ class LinearWithConstraint(nn.Linear):
 class EEGNet(nn.Module):
     def __init__(
         self,
+        num_classes: int = 2,
         channels: int = 32,
         samples: int = 8064,
-        classes: int = 2,
         f1: int = 8,
         d: int = 2,
         f2: int = 16,
@@ -45,9 +45,9 @@ class EEGNet(nn.Module):
         dropout_rate: float = 0.5,
     ):
         super().__init__()
+        self.num_classes = num_classes
         self.channels = channels
         self.samples = samples
-        self.classes = classes
 
         # Block 1
         self.conv1 = nn.Conv2d(1, f1, (1, kernel_length), padding=(0, kernel_length // 2), bias=False)
@@ -67,19 +67,17 @@ class EEGNet(nn.Module):
         self.pool2 = nn.AvgPool2d((1, 8))
         self.drop2 = nn.Dropout(dropout_rate)
 
-        # Compute flatten size dynamically
+        # Compute flatten size
         with torch.no_grad():
             dummy = torch.zeros(1, 1, channels, samples)
             x = self.drop1(self.pool1(self.act1(self.bn2(self.depthwise(self.bn1(self.conv1(dummy)))))))
             x = self.drop2(self.pool2(self.act2(self.bn3(self.separable(x)))))
             flatten_dim = x.numel()
 
-        # Classifier
-        self.classifier = LinearWithConstraint(flatten_dim, classes, max_norm=0.25)
+        self.classifier = LinearWithConstraint(flatten_dim, num_classes, max_norm=0.25)
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         if x.ndim == 3:
-            # (Batch, Channels, Time) -> (Batch, 1, Channels, Time)
             x = x.unsqueeze(1)
 
         x = self.conv1(x)
