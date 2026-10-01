@@ -2,9 +2,9 @@
 import torch
 from torch.utils.data import DataLoader
 
-from src.eeg_benchmark.data import EEGDataset, EEGStandardScaler
-from src.eeg_benchmark.models import EEGNet
-from src.eeg_benchmark.training import Trainer, TrainConfig
+from eeg_benchmark.data import EEGDataset, EEGStandardScaler
+from eeg_benchmark.models import EEGNet
+from eeg_benchmark.training import Trainer, TrainConfig
 
 
 def test_trainer_runs_one_epoch_cpu():
