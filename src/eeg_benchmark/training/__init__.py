@@ -1,3 +1,2 @@
-﻿from src.eeg_benchmark.training.trainer import Trainer, TrainConfig
-
-__all__ = ["Trainer", "TrainConfig"]
+from .trainer import Trainer
+__all__ = ['Trainer']
